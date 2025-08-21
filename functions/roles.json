@@ -1,0 +1,211 @@
+{
+  "data_analyst": {
+    "roleId": "data_analyst",
+    "title": "Data Analyst",
+    "skills": [
+      {"name": "sql", "weight": 1.0},
+      {"name": "excel", "weight": 0.9},
+      {"name": "data visualization", "weight": 0.9},
+      {"name": "statistics", "weight": 0.8},
+      {"name": "python", "weight": 0.8},
+      {"name": "business communication", "weight": 0.7},
+      {"name": "data cleaning", "weight": 0.8},
+      {"name": "power bi", "weight": 0.7},
+      {"name": "tableau", "weight": 0.7},
+      {"name": "critical thinking", "weight": 0.8}
+    ],
+    "sector": "Technology"
+  },
+  "genai_engineer": {
+    "roleId": "genai_engineer",
+    "title": "Generative AI Engineer",
+    "skills": [
+      {"name": "python", "weight": 1.0},
+      {"name": "machine learning", "weight": 0.9},
+      {"name": "deep learning", "weight": 0.9},
+      {"name": "tensorflow", "weight": 0.8},
+      {"name": "pytorch", "weight": 0.8},
+      {"name": "nlp", "weight": 0.8},
+      {"name": "computer vision", "weight": 0.7},
+      {"name": "git", "weight": 0.7},
+      {"name": "docker", "weight": 0.6},
+      {"name": "cloud platforms", "weight": 0.7},
+      {"name": "mathematics", "weight": 0.8}
+    ],
+    "sector": "AI & Machine Learning"
+  },
+  "fullstack_dev": {
+    "roleId": "fullstack_dev",
+    "title": "Full Stack Developer",
+    "skills": [
+      {"name": "javascript", "weight": 1.0},
+      {"name": "html", "weight": 0.9},
+      {"name": "css", "weight": 0.9},
+      {"name": "react", "weight": 0.8},
+      {"name": "node.js", "weight": 0.8},
+      {"name": "mongodb", "weight": 0.7},
+      {"name": "sql", "weight": 0.7},
+      {"name": "git", "weight": 0.8},
+      {"name": "rest apis", "weight": 0.8},
+      {"name": "aws", "weight": 0.6},
+      {"name": "docker", "weight": 0.6}
+    ],
+    "sector": "Technology"
+  },
+  "cloud_devops": {
+    "roleId": "cloud_devops",
+    "title": "Cloud DevOps Engineer",
+    "skills": [
+      {"name": "aws", "weight": 1.0},
+      {"name": "docker", "weight": 0.9},
+      {"name": "kubernetes", "weight": 0.8},
+      {"name": "linux", "weight": 0.8},
+      {"name": "python", "weight": 0.7},
+      {"name": "terraform", "weight": 0.8},
+      {"name": "jenkins", "weight": 0.7},
+      {"name": "git", "weight": 0.8},
+      {"name": "monitoring", "weight": 0.7},
+      {"name": "ci/cd", "weight": 0.8},
+      {"name": "networking", "weight": 0.6}
+    ],
+    "sector": "Cloud & DevOps"
+  },
+  "cybersecurity_analyst": {
+    "roleId": "cybersecurity_analyst",
+    "title": "Cybersecurity Analyst",
+    "skills": [
+      {"name": "network security", "weight": 1.0},
+      {"name": "ethical hacking", "weight": 0.9},
+      {"name": "incident response", "weight": 0.8},
+      {"name": "vulnerability assessment", "weight": 0.8},
+      {"name": "siem tools", "weight": 0.7},
+      {"name": "python", "weight": 0.7},
+      {"name": "linux", "weight": 0.8},
+      {"name": "windows", "weight": 0.7},
+      {"name": "forensics", "weight": 0.7},
+      {"name": "compliance", "weight": 0.6},
+      {"name": "threat intelligence", "weight": 0.7}
+    ],
+    "sector": "Cybersecurity"
+  },
+  "business_analyst": {
+    "roleId": "business_analyst",
+    "title": "Business Analyst",
+    "skills": [
+      {"name": "business analysis", "weight": 1.0},
+      {"name": "requirements gathering", "weight": 0.9},
+      {"name": "sql", "weight": 0.7},
+      {"name": "excel", "weight": 0.8},
+      {"name": "powerpoint", "weight": 0.7},
+      {"name": "stakeholder management", "weight": 0.8},
+      {"name": "process modeling", "weight": 0.7},
+      {"name": "data analysis", "weight": 0.7},
+      {"name": "agile", "weight": 0.7},
+      {"name": "communication", "weight": 0.9}
+    ],
+    "sector": "Business"
+  },
+  "qa_automation": {
+    "roleId": "qa_automation",
+    "title": "QA Automation Engineer",
+    "skills": [
+      {"name": "selenium", "weight": 1.0},
+      {"name": "java", "weight": 0.8},
+      {"name": "python", "weight": 0.7},
+      {"name": "test automation", "weight": 0.9},
+      {"name": "manual testing", "weight": 0.8},
+      {"name": "api testing", "weight": 0.8},
+      {"name": "git", "weight": 0.7},
+      {"name": "jenkins", "weight": 0.6},
+      {"name": "test planning", "weight": 0.7},
+      {"name": "defect tracking", "weight": 0.7}
+    ],
+    "sector": "Quality Assurance"
+  },
+  "uiux_designer": {
+    "roleId": "uiux_designer",
+    "title": "UI/UX Designer",
+    "skills": [
+      {"name": "figma", "weight": 1.0},
+      {"name": "adobe xd", "weight": 0.8},
+      {"name": "sketch", "weight": 0.7},
+      {"name": "user research", "weight": 0.8},
+      {"name": "wireframing", "weight": 0.9},
+      {"name": "prototyping", "weight": 0.9},
+      {"name": "visual design", "weight": 0.8},
+      {"name": "user testing", "weight": 0.7},
+      {"name": "information architecture", "weight": 0.7},
+      {"name": "design systems", "weight": 0.6}
+    ],
+    "sector": "Design & UX"
+  },
+  "product_manager": {
+    "roleId": "product_manager",
+    "title": "Product Manager",
+    "skills": [
+      {"name": "product strategy", "weight": 1.0},
+      {"name": "market research", "weight": 0.8},
+      {"name": "user stories", "weight": 0.8},
+      {"name": "agile", "weight": 0.8},
+      {"name": "data analysis", "weight": 0.7},
+      {"name": "stakeholder management", "weight": 0.9},
+      {"name": "roadmapping", "weight": 0.8},
+      {"name": "user research", "weight": 0.7},
+      {"name": "business acumen", "weight": 0.8},
+      {"name": "communication", "weight": 0.9}
+    ],
+    "sector": "Product Management"
+  },
+  "mobile_dev": {
+    "roleId": "mobile_dev",
+    "title": "Mobile App Developer",
+    "skills": [
+      {"name": "swift", "weight": 0.8},
+      {"name": "kotlin", "weight": 0.8},
+      {"name": "react native", "weight": 0.9},
+      {"name": "flutter", "weight": 0.8},
+      {"name": "java", "weight": 0.7},
+      {"name": "objective-c", "weight": 0.6},
+      {"name": "mobile ui design", "weight": 0.7},
+      {"name": "git", "weight": 0.8},
+      {"name": "api integration", "weight": 0.8},
+      {"name": "app store deployment", "weight": 0.6}
+    ],
+    "sector": "Mobile Development"
+  },
+  "digital_marketer": {
+    "roleId": "digital_marketer",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      {"name": "google ads", "weight": 1.0},
+      {"name": "facebook ads", "weight": 0.9},
+      {"name": "seo", "weight": 0.8},
+      {"name": "content marketing", "weight": 0.8},
+      {"name": "social media", "weight": 0.9},
+      {"name": "email marketing", "weight": 0.7},
+      {"name": "analytics", "weight": 0.8},
+      {"name": "copywriting", "weight": 0.7},
+      {"name": "campaign management", "weight": 0.8},
+      {"name": "crm tools", "weight": 0.6}
+    ],
+    "sector": "Digital Marketing"
+  },
+  "data_engineer": {
+    "roleId": "data_engineer",
+    "title": "Data Engineer",
+    "skills": [
+      {"name": "python", "weight": 1.0},
+      {"name": "sql", "weight": 0.9},
+      {"name": "apache spark", "weight": 0.8},
+      {"name": "hadoop", "weight": 0.7},
+      {"name": "aws", "weight": 0.8},
+      {"name": "etl", "weight": 0.9},
+      {"name": "data warehousing", "weight": 0.8},
+      {"name": "kafka", "weight": 0.7},
+      {"name": "airflow", "weight": 0.7},
+      {"name": "docker", "weight": 0.6},
+      {"name": "git", "weight": 0.7}
+    ],
+    "sector": "Data & Analytics"
+  }
+}

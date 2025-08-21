@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenSpark - Personalized Career & Skills Advisor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="GenSpark Logo" class="logo-img">
+                <h1>GenSpark</h1>
+            </div>
+            <div class="auth-section">
+                <button id="signInBtn" class="btn btn-primary">Sign In</button>
+                <button id="signOutBtn" class="btn btn-secondary" style="display: none;">Sign Out</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section (shown when not signed in) -->
+            <section id="welcomeSection" class="welcome-section">
+                <div class="hero">
+                    <h2>Discover Your Perfect Career Path</h2>
+                    <p>Get personalized career recommendations and learning plans powered by AI</p>
+                    <button id="getStartedBtn" class="btn btn-primary btn-large">Get Started</button>
+                </div>
+            </section>
+
+            <!-- Profile Form (shown when signed in) -->
+            <section id="profileSection" class="profile-section" style="display: none;">
+                <div class="form-container">
+                    <h2>Tell Us About Yourself</h2>
+                    <p>Help us understand your background to provide the best recommendations</p>
+                    
+                    <form id="profileForm" class="profile-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="education">Education Level *</label>
+                            <select id="education" name="education" required>
+                                <option value="">Select education level</option>
+                                <option value="12th">12th Standard</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="UG">Undergraduate (UG)</option>
+                                <option value="PG">Postgraduate (PG)</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Current Skills *</label>
+                            <input type="text" id="skills" name="skills" placeholder="e.g., sql, excel, python" required>
+                            <small>Separate skills with commas</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Interests *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="data">
+                                    <span class="checkmark"></span>
+                                    Data & Analytics
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="design">
+                                    <span class="checkmark"></span>
+                                    Design & UX
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="cloud">
+                                    <span class="checkmark"></span>
+                                    Cloud & DevOps
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="mobile">
+                                    <span class="checkmark"></span>
+                                    Mobile Development
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="ai">
+                                    <span class="checkmark"></span>
+                                    AI & Machine Learning
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="cybersecurity">
+                                    <span class="checkmark"></span>
+                                    Cybersecurity
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weeklyTime">Weekly Study Time (hours) *</label>
+                            <input type="number" id="weeklyTime" name="weeklyTime" min="1" max="40" value="8" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Preference *</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select budget preference</option>
+                                <option value="free">Free resources only</option>
+                                <option value="low">Low cost (< ₹1000/month)</option>
+                                <option value="any">Any budget</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="language">Preferred Language *</label>
+                            <select id="language" name="language" required>
+                                <option value="">Select language</option>
+                                <option value="en">English</option>
+                                <option value="hi">Hindi</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+                            Generate Recommendations
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section id="loadingSection" class="loading-section" style="display: none;">
+                <div class="loading-content">
+                    <div class="spinner"></div>
+                    <h3>Analyzing your profile...</h3>
+                    <p>Our AI is crafting personalized recommendations for you</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast Messages -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="app.js"></script>
+    <script src="ui.js"></script>
+    <script src="api.js"></script>
+</body>
+</html>

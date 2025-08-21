@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GenSpark Career Advisor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="GenSpark Logo" class="logo-img">
+                <h1>GenSpark</h1>
+            </div>
+            <nav class="nav">
+                <button id="profileBtn" class="btn btn-text">Profile</button>
+                <button id="signOutBtn" class="btn btn-secondary">Sign Out</button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-banner">
+                <h2>Welcome back, <span id="userName">User</span>!</h2>
+                <p>Here are your personalized career recommendations</p>
+            </section>
+
+            <!-- Recommendations Section -->
+            <section class="recommendations-section">
+                <div class="section-header">
+                    <h3>Top Career Recommendations</h3>
+                    <button id="regenerateBtn" class="btn btn-outline">Regenerate</button>
+                </div>
+                
+                <div id="recommendationsContainer" class="recommendations-grid">
+                    <!-- Recommendations will be populated here -->
+                </div>
+            </section>
+
+            <!-- Learning Plan Modal -->
+            <div id="planModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modalTitle">Learning Plan</h3>
+                        <button id="closeModal" class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="planContent">
+                            <!-- Learning plan will be populated here -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="downloadPdfBtn" class="btn btn-primary">Download PDF</button>
+                        <button id="savePlanBtn" class="btn btn-outline">Save Plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Modal -->
+            <div id="profileModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Your Profile</h3>
+                        <button id="closeProfileModal" class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="profileContent">
+                            <!-- Profile will be populated here -->
+                        </div>
+                        <div class="profile-actions">
+                            <button id="editProfileBtn" class="btn btn-primary">Edit Profile</button>
+                            <button id="deleteDataBtn" class="btn btn-danger">Delete My Data</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Confirmation Modal -->
+            <div id="deleteModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Confirm Deletion</h3>
+                        <button id="closeDeleteModal" class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete all your data? This action cannot be undone.</p>
+                        <p><strong>This will permanently remove:</strong></p>
+                        <ul>
+                            <li>Your profile information</li>
+                            <li>All career recommendations</li>
+                            <li>Learning plans</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="confirmDeleteBtn" class="btn btn-danger">Yes, Delete Everything</button>
+                        <button id="cancelDeleteBtn" class="btn btn-outline">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Toast Messages -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="app.js"></script>
+    <script src="ui.js"></script>
+    <script src="api.js"></script>
+    
+    <script>
+        // Dashboard-specific initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is authenticated
+            if (!firebase.auth().currentUser) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Load user data and recommendations
+            loadDashboardData();
+        });
+    </script>
+</body>
+</html>
